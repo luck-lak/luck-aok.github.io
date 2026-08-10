@@ -10,9 +10,7 @@
     <script src="./js/main.js" defer></script>
 
     <link href="./css/style.css" rel="stylesheet">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,39 +19,47 @@
         <nav class="main-navigation">
             <a href="#about-me">About Me</a>
             <a href="#projects">Projects</a>
-            <a href="#learning-records">Learning Records</a>
             <a href="#technical-journey">Technical Journey</a>
+            <a href="#learning-records">Learning Records</a>
             <a href="#contact-me">Contact Me</a>
         </nav>
+
+        <button class="theme-button" type="button">
+            🌙
+        </button>
     </header>
 
     <main>
 
         <section id="about-me">
-            <h2>About Me</h2>
+            <div class="about-me-content">
+                <h2>About Me</h2>
 
-            <p>
-                Hi! I am AoKun, an undergraduate student at Nanjing University,
-                majoring in Intelligent Science and Technology.
-            </p>
+                <p>
+                    Hi! I am AoKun, an undergraduate student at Nanjing University,
+                    majoring in Intelligent Science and Technology.
+                </p>
 
-            <p>
-                My journey in computer science is driven by curiosity.
-                I am fascinated by how ideas can be transformed into
-                real systems through programming, algorithms, and engineering.
-            </p>
+                <p>
+                    My journey in computer science is driven by curiosity.
+                    I am fascinated by how ideas can be transformed into
+                    real systems through programming, algorithms, and engineering.
+                </p>
 
-            <p>
-                Recently, I have been exploring topics including artificial
-                intelligence, large language models, web development, and
-                software engineering. I believe that the best way to learn
-                technology is by building things and continuously improving.
-            </p>
+                <p>
+                    Recently, I have been exploring topics including artificial
+                    intelligence, large language models, web development, and
+                    software engineering. I believe that the best way to learn
+                    technology is by building things and continuously improving.
+                </p>
 
-            <p>
-                This website serves as my personal space to document my
-                projects, learning records, and interesting discoveries.
-            </p>
+                <p>
+                    This website serves as my personal space to document my
+                    projects, learning records, and interesting discoveries.
+                </p>
+            </div>
+
+            <img class="personal-img" src="assets/images/personal-img.png" alt="Portrait of Aokun Lei">
         </section>
 
         <section id="projects">
@@ -62,13 +68,6 @@
             <p>Now I didn't have a project I really like, I am working towards it</p>
         </section>
 
-        <section id="learning-records">
-            <h2>Learning Records</h2>
-            <a href="./学习探索记录.docx" download>
-                There records many interesting courses I have taken
-            </a>
-            <p>It's a .docx document, it seems like you need to download and then you can see.</p>
-        </section>
 
         <section id="technical-journey">
             <h2>Technical Journey</h2>
@@ -82,7 +81,7 @@
             <article class="programming">
                 <h3>Programming</h3>
                 <p>
-                    <b>Python, JavaScript, C, C++</b>
+                    <b><em>Python, JavaScript, C, C++</em></b>
                 </p>
                 <p>
                     Python is currently the language I use most often, especially for
@@ -93,7 +92,7 @@
             <article class="'artificial-intelligence">
                 <h3>Artificial Intelligence</h3>
                 <p>
-                    <b>Machine Learning, Deep Learning, Large Language Models, AI Agents</b>
+                    <b><em>Machine Learning, Deep Learning, Large Language Models, AI Agents</em></b>
                 </p>
                 <p>
                     AI is one of the areas I spend the most time exploring. My recent work
@@ -104,7 +103,7 @@
             <article class="web-development">
                 <h3>Web Development</h3>
                 <p>
-                    <b>HTML, CSS, JavaScript, GitHub Pages</b>
+                    <b><em>HTML, CSS, JavaScript, GitHub Pages</em></b>
                 </p>
                 <p>
                     I recently started learning web development and built this website as
@@ -115,7 +114,7 @@
             <article class="development-tools">
                 <h3>Development Tools</h3>
                 <p>
-                    <b>GitHub, VS Code, Conda, Jupyter</b>
+                    <b><em>GitHub, VS Code, Conda, Jupyter</em></b>
                 </p>
                 <p>
                     I use these tools regularly for coursework, experiments, version
@@ -134,6 +133,15 @@
                 technologies and areas I am working with right now, and I hope to keep
                 updating it as I learn more.
             </p>
+        </section>
+
+        <section id="learning-records">
+            <h2>Learning Records</h2>
+            <a href="./学习探索记录.docx" download>
+                Some interesting learning records
+            </a>
+            <p>There have many interesting resourses I have enjoyed, mainly in AI field</p>
+            <p>It's a .docx document, it seems like you need to download and then you can see.</p>
         </section>
 
         <section id="contact-me">

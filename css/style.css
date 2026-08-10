@@ -1,4 +1,138 @@
 body{
     font-family: Inter, Arial, sans-serif;
     text-align: center;
+
+    background-color: white; /* 白色背景 */
+    color: black;            /* 黑色文字 */
 }
+
+body.dark-mode {
+    background-color: #1f1f1f; /* 接近黑色，但没有纯黑那么刺眼 */
+    color: white;              /* 白色文字 */
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f; /* 深灰黑色背景 */
+}
+
+body.dark-mode nav a {
+    color: white; /* 导航链接变成白色 */
+}
+
+body.dark-mode .theme-button {
+    background-color: #333333; /* 深灰色按钮 */
+    color: white;              /* 按钮中的图标变成白色 */
+    border-color: gray;        /* 灰色边框 */
+}
+
+body.dark-mode #learning-records a{
+    color: orange
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background-color: white;
+}
+
+main {
+    padding-top: 80px;
+}
+
+/* *{
+    border: 1px solid red;
+} */
+
+header h1{
+    margin: 0;
+    margin-left: 30px;
+    padding: 16px 0;
+}
+
+nav a:visited {
+    color: blue;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+body.dark-mode nav a {
+    color: white; /* 黑夜模式下使用白色 */
+}
+
+body.dark-mode nav a:visited {
+    color: white; /* 点击后仍然保持白色 */
+}
+
+body.dark-mode nav a:hover {
+    color: lightgray; /* 鼠标悬停时变成浅灰色 */
+}
+
+.theme-button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
+
+    background-color: lightgray;  /* 白色按钮背景 */
+    border: 1px solid slategray;   /* 灰色边框 */
+    border-radius: 50%;       /* 把按钮变成圆形 */
+
+    cursor: pointer;          /* 鼠标放上去时显示手形 */
+
+    margin-right: 30px;
+}
+
+section{
+    padding: 30px 40% 30px 15%;
+    text-align: left;
+}
+
+#about-me {
+    position: relative;
+    min-height: 360px;
+}
+
+.personal-img {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+
+    width: 220px;
+    max-width: 25%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #about-me {
+        padding-right: 15%;
+        min-height: auto;
+    }
+
+    .personal-img {
+        position: static;
+        transform: none;
+        display: block;
+        width: 180px;
+        max-width: 100%;
+        margin-top: 24px;
+    }
+}
+
