@@ -59,7 +59,7 @@ header h1{
 }
 
 nav a:visited {
-    color: blue;
+    color: black;
 }
 
 nav a:hover {
@@ -70,6 +70,11 @@ nav {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
 }
 
 body.dark-mode nav a {
@@ -104,6 +109,8 @@ section{
     text-align: left;
 }
 
+
+
 #about-me {
     position: relative;
     min-height: 360px;
@@ -136,3 +143,80 @@ section{
     }
 }
 
+@media (max-width: 768px) {
+    /* header 可以排列成两行 */
+    header {
+        padding-top: 8px;
+    }
+
+    /* 网站标题放在第一行左边 */
+    header h1 {
+        margin-left: 20px;
+        font-size: 24px;
+    }
+
+    /* 主题按钮放在第一行右边 */
+    .theme-button {
+        margin-right: 20px;
+    }
+
+    /* 导航放到第二行 */
+    nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    /* header 变成两行后，main 需要留出更多空间 */
+    main {
+        padding-top: 140px;
+    }
+
+    /* 只在手机上减少 section 左右留白 */
+    section {
+        padding: 24px 8%;
+    }
+
+    #about-me {
+        min-height: auto;
+    }
+
+    /* 手机上让图片回到正常排列中 */
+    .personal-img {
+        position: static;
+        transform: none;
+
+        display: block;
+        width: 180px;
+        max-width: 100%;
+
+        margin-top: 24px;
+    }
+
+    /* 防止很长的邮箱地址撑破页面 */
+    #contact-me {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 8px 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    main {
+        padding-top: 155px;
+    }
+}
