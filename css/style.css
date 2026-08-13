@@ -44,6 +44,11 @@ header {
     background-color: white;
 }
 
+html {
+    scroll-padding-top: 80px; /* 点击导航时，在顶部为固定导航栏留出空间 */
+    scroll-behavior: smooth;   /* 点击导航后平滑滚动，可选 */
+}
+
 main {
     padding-top: 80px;
 }
