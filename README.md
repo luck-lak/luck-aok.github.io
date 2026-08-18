@@ -32,3 +32,18 @@ When adding a new section, keep the structure consistent:
     <h2>Section Title</h2>
     <p>Content...</p>
 </section>
+```
+
+### Updating Projects
+
+Projects are kept in the `#projects` section of `index.html`. To add one, copy a
+`<article class="project-card">` block, then update the project name, GitHub link,
+and one-sentence description. The card layout is already defined in
+`css/style.css`, so no CSS changes are needed for a normal new project.
+
+```html
+<article class="project-card">
+    <h3><a href="https://github.com/your-name/your-project">Project Name</a></h3>
+    <p>A short description of what the project explores or does.</p>
+</article>
+```

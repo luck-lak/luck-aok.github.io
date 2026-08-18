@@ -1,3 +1,9 @@
+/* Global page settings */
+html {
+    scroll-padding-top: 80px; /* 为固定导航栏预留滚动顶部间距 */
+    scroll-behavior: smooth;  /* 点击导航链接时平滑滚动 */
+}
+
 body{
     font-family: Inter, Arial, sans-serif;
     text-align: center;
@@ -6,29 +12,16 @@ body{
     color: black;            /* 黑色文字 */
 }
 
-body.dark-mode {
-    background-color: #1f1f1f; /* 接近黑色，但没有纯黑那么刺眼 */
-    color: white;              /* 白色文字 */
+main {
+    padding-top: 80px;
 }
 
-body.dark-mode header {
-    background-color: #1f1f1f; /* 深灰黑色背景 */
+section{
+    padding: 30px 40% 30px 15%;
+    text-align: left;
 }
 
-body.dark-mode nav a {
-    color: white; /* 导航链接变成白色 */
-}
-
-body.dark-mode .theme-button {
-    background-color: #333333; /* 深灰色按钮 */
-    color: white;              /* 按钮中的图标变成白色 */
-    border-color: gray;        /* 灰色边框 */
-}
-
-body.dark-mode #learning-records a{
-    color: orange
-}
-
+/* Fixed header and navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -44,31 +37,10 @@ header {
     background-color: white;
 }
 
-html {
-    scroll-padding-top: 80px; /* 点击导航时，在顶部为固定导航栏留出空间 */
-    scroll-behavior: smooth;   /* 点击导航后平滑滚动，可选 */
-}
-
-main {
-    padding-top: 80px;
-}
-
-/* *{
-    border: 1px solid red;
-} */
-
 header h1{
     margin: 0;
     margin-left: 30px;
     padding: 16px 0;
-}
-
-nav a:visited {
-    color: black;
-}
-
-nav a:hover {
-    color: gray;
 }
 
 nav {
@@ -82,16 +54,12 @@ nav a{
     text-decoration: none;
 }
 
-body.dark-mode nav a {
-    color: white; /* 黑夜模式下使用白色 */
+nav a:visited {
+    color: black;
 }
 
-body.dark-mode nav a:visited {
-    color: white; /* 点击后仍然保持白色 */
-}
-
-body.dark-mode nav a:hover {
-    color: lightgray; /* 鼠标悬停时变成浅灰色 */
+nav a:hover {
+    color: gray;
 }
 
 .theme-button {
@@ -100,22 +68,55 @@ body.dark-mode nav a:hover {
 
     font-size: 20px;
 
-    background-color: lightgray;  /* 白色按钮背景 */
+    background-color: lightgray;  /* 浅灰色按钮背景 */
     border: 1px solid slategray;   /* 灰色边框 */
-    border-radius: 50%;       /* 把按钮变成圆形 */
+    border-radius: 50%;       /* 将按钮设为圆形 */
 
-    cursor: pointer;          /* 鼠标放上去时显示手形 */
+    cursor: pointer;          /* 鼠标悬停时显示手型 */
 
     margin-right: 30px;
 }
 
-section{
-    padding: 30px 40% 30px 15%;
-    text-align: left;
+/* Projects section */
+#projects {
+    max-width: 700px;
 }
 
+.projects-intro {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
 
+.project-list {
+    display: grid;
+    gap: 14px;
+}
 
+.project-card {
+    padding: 18px 20px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 0 0 8px;
+}
+
+.project-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.project-card a {
+    color: black;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* About section image */
 #about-me {
     position: relative;
     min-height: 360px;
@@ -132,6 +133,64 @@ section{
     height: auto;
 }
 
+/* Learning Records */
+#learning-records a{
+    color: black;
+}
+
+#learning-records a:hover{
+    color: grey;
+}
+
+#learning-records a:visited{
+    color: black;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    background-color: #1f1f1f; /* 接近黑色但不刺眼的背景 */
+    color: white;              /* 白色文字 */
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f; /* 深灰黑色背景 */
+}
+
+body.dark-mode nav a {
+    color: white; /* 导航链接显示为白色 */
+}
+
+body.dark-mode .theme-button {
+    background-color: #333333; /* 深灰色按钮背景 */
+    color: white;              /* 按钮图标显示为白色 */
+    border-color: gray;        /* 灰色边框 */
+}
+
+body.dark-mode #learning-records a{
+    color: orange
+}
+
+body.dark-mode .project-card a{
+    color: white;
+}
+
+body.dark-mode .project-card {
+    border-color: #555;
+}
+
+body.dark-mode nav a {
+    color: white; /* 深色模式下使用白色文字 */
+}
+
+body.dark-mode nav a:visited {
+    color: white; /* 点击后仍保持白色 */
+}
+
+body.dark-mode nav a:hover {
+    color: lightgray; /* 鼠标悬停时变为浅灰色 */
+}
+
+/* Responsive layout: tablet and mobile */
 @media (max-width: 768px) {
     #about-me {
         padding-right: 15%;
@@ -149,18 +208,18 @@ section{
 }
 
 @media (max-width: 768px) {
-    /* header 可以排列成两行 */
+    /* 头部可以排列成两行 */
     header {
         padding-top: 8px;
     }
 
-    /* 网站标题放在第一行左边 */
+    /* 网站标题放在第一行左侧 */
     header h1 {
         margin-left: 20px;
         font-size: 24px;
     }
 
-    /* 主题按钮放在第一行右边 */
+    /* 主题按钮放在第一行右侧 */
     .theme-button {
         margin-right: 20px;
     }
@@ -180,12 +239,12 @@ section{
         font-size: 14px;
     }
 
-    /* header 变成两行后，main 需要留出更多空间 */
+    /* 头部变为两行后，为 main 留出更多空间 */
     main {
         padding-top: 140px;
     }
 
-    /* 只在手机上减少 section 左右留白 */
+    /* 仅在手机上减少 section 左右留白 */
     section {
         padding: 24px 8%;
     }
@@ -194,7 +253,7 @@ section{
         min-height: auto;
     }
 
-    /* 手机上让图片回到正常排列中 */
+    /* 手机上让图片回到正常文档流 */
     .personal-img {
         position: static;
         transform: none;
@@ -206,7 +265,7 @@ section{
         margin-top: 24px;
     }
 
-    /* 防止很长的邮箱地址撑破页面 */
+    /* 防止过长的邮箱地址撑破页面 */
     #contact-me {
         overflow-wrap: anywhere;
     }
